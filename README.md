@@ -1,6 +1,7 @@
 # Meal-Tracker
 
 🥘 Meal Tracker
+
 A simple, browser-based meal tracking app that helps you log daily meal counts, calculate monthly costs, and visualize your eating habits. Built with HTML, CSS, and JavaScript, this app uses localStorage to save data privately on your device—no login required.
 
 🔗 **Live Demo:** [Meal Tracker](https://abdurrahmancce.github.io/Meal-Tracker/)
@@ -29,7 +30,7 @@ A simple, browser-based meal tracking app that helps you log daily meal counts, 
 
 - Clear Month: Reset entries for selected month
 
-📖 How to Use
+📖 How to Use:
 - Visit the app: Meal Tracker
 
 - Select your month and enter your meal rate.
@@ -41,7 +42,7 @@ A simple, browser-based meal tracking app that helps you log daily meal counts, 
 - Scroll down to view your meal and cost charts.
 
 👨‍💻 Developer
-- Made with ❤️ by Abdur Rahman
+Made with ❤️ by Abdur Rahman
 
 - 🔗 GitHub Profile
 
