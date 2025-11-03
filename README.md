@@ -45,8 +45,6 @@ A simple, browser-based meal tracking app that helps you log daily meal counts, 
 
 Made with ❤️ by Abdur Rahman
 
-- 🔗 GitHub Profile
-
-- 📧 Email
-
-- 🌐 LinkedIn
+* **GitHub:** [https://github.com/abdurrahmancce](https://github.com/abdurrahmancce)
+* **LinkedIn:** [https://www.linkedin.com/in/abdur-rahman-akash-60450b2aa](https://www.linkedin.com/in/abdur-rahman-akash-60450b2aa)
+* **Email:** [akash.abdur.2002@gmail.com](mailto:akash.abdur.2002@gmail.com)
