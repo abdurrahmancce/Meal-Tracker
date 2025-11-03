@@ -1,0 +1,295 @@
+/* ==========================
+   Smart Meal Tracker - CSS
+   Clean, organized and readable
+   ========================== */
+
+/* ---- CSS variables ---- */
+:root {
+    --bg: #f4f7fb;
+    --card: #fff;
+    --text: #000000;
+    --muted: #5b6b7a;
+    --accent: #3ac96c;
+    --danger: #dc2626;
+
+    --radius: 10px;
+    --gap: 12px;
+}
+
+/* Dark theme variables (applied via body.dark) */
+body.dark {
+    --bg: #020202;
+    --card: #2b2d3a;
+    --text: #ffffff;
+    --muted: #ffffff;
+    --accent: #34d399;
+}
+
+/* ---- Global reset / base ---- */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+}
+
+/* ---- Header ---- */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: linear-gradient(90deg, var(--accent), #22c55e);
+    color: white;
+    border-radius: 0;
+}
+
+.header-bar h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.hdr-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hdr-controls input[type="month"],
+.hdr-controls input[type="number"] {
+    padding: 6px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: transparent;
+    color: inherit;
+}
+
+/* ---- Layout ---- */
+.main-container {
+    max-width: 1100px;
+    margin: 16px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 16px;
+}
+
+@media (max-width: 1000px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Card ---- */
+.card {
+    background: var(--card);
+    padding: 14px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.05rem;
+}
+
+/* ---- Controls / Buttons ---- */
+.controls-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: var(--accent);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn.danger {
+    background: var(--danger);
+}
+
+/* ---- Notes / helpers ---- */
+.note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* ---- Grid (month selection table) ---- */
+.grid-wrap {
+    overflow: auto;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+
+/* meal-grid table */
+.meal-grid {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.meal-grid thead th,
+.meal-grid tbody td {
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.meal-grid thead th {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.04);
+    z-index: 2;
+}
+
+.meal-cell {
+    cursor: pointer;
+    padding: 6px;
+}
+
+.meal-radio {
+    display: none;
+}
+
+.meal-label {
+    display: inline-block;
+    padding: 6px 8px;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.meal-radio:checked + .meal-label {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.12);
+}
+
+/* ---- Entries table ---- */
+.table-wrap {
+    overflow: auto;
+}
+
+.entries-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.entries-table thead th {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.entries-table th,
+.entries-table td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    text-align: left;
+}
+
+/* ---- Charts area ---- */
+.chart-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.chart-card {
+    flex: 1;
+    background: transparent;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.chart-card.full {
+    flex: 2;
+}
+
+/* ---- Footer ---- */
+.footer-bar {
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: var(--card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.developer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.small-note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ---- Responsive adjustments ---- */
+@media (max-width: 600px) {
+    .hdr-controls {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+    }
+
+    .main-container {
+        padding: 0 10px;
+    }
+
+    .chart-row {
+        flex-direction: column;
+    }
+
+    .footer-bar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .developer-info {
+        align-items: center;
+    }
+}

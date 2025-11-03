@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Smart Meal Tracker </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header-bar">
+    <h1>🍴 Track Your Personal Meal 🍴</h1>
+    <div class="hdr-controls">
+      <button id="themeSwitch" title="Toggle theme">🌙</button>
+      <label class="month-label">Month: <input id="monthSelect" type="month"></label>
+      <label>Rate (৳/meal): <input id="mealRate" type="number" min="0" step="0.01" placeholder="Enter at month-end"></label>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="card" id="gridCard">
+      <h2>Pick daily meal amount (tick one per day)</h2>
+      <div class="controls-row">
+        <button id="generateGrid" class="btn">Generate Month Grid</button>
+        <button id="saveAll" class="btn">Save All</button>
+        <button id="clearMonth" class="btn danger">Clear Month</button>
+      </div>
+      <div id="gridWrap" class="grid-wrap" aria-live="polite">
+        <!-- month table will be injected here -->
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Daily Entries (table)</h2>
+      <div class="table-wrap">
+        <table class="entries-table" id="entryTable">
+          <thead>
+            <tr><th>Date</th><th>Meals</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="entryTbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Charts</h2>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Meals per day (selected month)</h3>
+          <canvas id="monthlyChart" height="160"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Monthly total meals (last 12 months)</h3>
+          <canvas id="monthlyMealsChart" height="160"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card full">
+          <h3>Monthly cost (last 12 months)</h3>
+          <canvas id="yearlyChart" height="160"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-bar">
+    <div class="developer-info">
+      <span>Developed by Abdur Rahman</span>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/abdur-rahman-akash-60450b2aa" target="_blank" title="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/abdurrahmancce" target="_blank" title="GitHub">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="social-icon">
+        </a>
+        <a href="mailto:akash.abdur.2002@gmail.com" title="Email">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="social-icon">
+        </a>
+      </div>
+    </div>
+    <div class="small-note">All Data saved in your browser (localStorage)</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
