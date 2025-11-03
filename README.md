@@ -42,6 +42,7 @@ A simple, browser-based meal tracking app that helps you log daily meal counts, 
 - Scroll down to view your meal and cost charts.
 
 👨‍💻 Developer
+
 Made with ❤️ by Abdur Rahman
 
 - 🔗 GitHub Profile
