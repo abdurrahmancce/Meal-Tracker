@@ -12,6 +12,10 @@ A simple, browser-based meal tracking app that helps you log daily meal counts, 
 
 - 💰 Cost Calculator: Set your meal rate and view total monthly cost.
 
+📸 Preview
+
+<img width="1920" height="7100" alt="MT" src="https://github.com/user-attachments/assets/bc06d054-67d2-41ea-8019-98398f407f0f" />
+
 📊 Interactive Charts:
 
 - Daily meal bar chart
