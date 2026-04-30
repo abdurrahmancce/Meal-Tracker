@@ -43,6 +43,11 @@ A simple, browser-based meal tracking app that helps you log daily meal counts, 
 
 - Scroll down to view your meal and cost charts.
 
+
+📄 License:
+
+This project is licensed under the MIT License.
+
 👨‍💻 Developer
 
 Made with ❤️ by Abdur Rahman
